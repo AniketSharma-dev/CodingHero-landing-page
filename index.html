@@ -4,35 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Coding Hero Landing Page</title>
 </head>
 
 <body>
+    <!-- Header Section -->
     <header>
-        <nav class="flex justify-between content-center w-full h-50 fixed px-10">
-            <h1 class="text-2xl text-center font-bold py-5">Coding hero</h1>
-            <ul class="flex ">
-                <li class="text-1xl font-semibold px-7 py-5 active:scale-110 "><a class=" hover:text-white " href="#">Home</a></li>
-                <li class="text-1xl font-semibold px-7 py-5 active:scale-110 "><a class=" hover:text-white " href="#">About</a></li>
-                <li class="text-1xl font-semibold px-7 py-5 active:scale-110 "><a class=" hover:text-white " href="#">Work</a></li>
-                <li class="text-1xl font-semibold px-7 py-5 active:scale-110 "><a class=" hover:text-white " href="#">Contact</a></li>
+        <nav class="text-black fixed w-full flex justify-between items-center px-5 md:px-10 py-4 z-10">
+            <h1 class="text-2xl font-bold">Coding Hero</h1>
+            <ul class="hidden md:flex space-x-16">
+                <li class="text-1xl font-semibold active:scale-110"><a href="#" class="hover:text-green-500 text-base md:text-lg">Home</a></li>
+                <li class="text-1xl font-semibold active:scale-110"><a href="#" class="hover:text-green-500 text-base md:text-lg">About</a></li>
+                <li class="text-1xl font-semibold active:scale-110"><a href="#" class="hover:text-green-500 text-base md:text-lg">Work</a></li>
+                <li class="text-1xl font-semibold active:scale-110"><a href="#" class="hover:text-green-500 text-base md:text-lg">Contact</a></li>
             </ul>
+            <!-- Mobile menu button -->
+            <button class="md:hidden text-black focus:outline-none" id="menu-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
         </nav>
+
+        <!-- Mobile Menu -->
+        <ul class="flex-col space-y-4 px-5 py-5 text-black hidden" id="mobile-menu">
+            <li class="text-1xl font-semibold md:px-7 py-5 mt-8 active:scale-110"><a href="#" class="hover:text-green-500">Home</a></li>
+            <li class="text-1xl font-semibold md:px-7 py-5 m-0 active:scale-110"><a href="#" class="hover:text-green-500">About</a></li>
+            <li class="text-1xl font-semibold md:px-7 py-5 m-0 active:scale-110"><a href="#" class="hover:text-green-500">Work</a></li>
+            <li class="text-1xl font-semibold md:px-7 py-5 m-0 active:scale-110"><a href="#" class="hover:text-green-500">Contact</a></li>
+        </ul>
     </header>
 
-    <div class="h-screen w-full bg-black flex ">
-        <div class="h-full w-6/12 bg-white px-20 py-32 ">
-            <h1 class="text-6xl">Learn from the<span class="text-green-500"> coolest<br> coding platfrom</span> in <br>
-                india</h1>
-                <button class="bg-green-500 mt-10  w-32 h-12 text-white text-lg hover:bg-orange-500 hover:scale-95">Explore Now</button>
+    <!-- Main Section -->
+    <div class="flex flex-col md:flex-row h-screen w-full bg-black text-white">
+        <div class="flex flex-col justify-center w-full md:w-6/12 bg-white text-black px-8 py-16 md:px-16 md:py-32">
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold">Learn from the <span class="text-green-500">coolest<br> coding platform</span> in India</h1>
+            <button class="bg-green-500 mt-8 md:mt-10 px-6 py-3 w-40 text-white text-lg hover:bg-orange-500">Explore Now</button>
         </div>
-        <div class="h-full w-6/12 bg-red-300 ">
-            <img class="h-full w-full object-cover" src="https://ik.imagekit.io/sheryians/photed_MVice1qZE.png"
-                alt="image">
+        <div class="w-full md:w-6/12">
+            <img class="h-full w-full object-cover" src="https://ik.imagekit.io/sheryians/photed_MVice1qZE.png" alt="coding image">
         </div>
     </div>
 
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Toggle mobile menu visibility on click
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close the mobile menu when screen is resized beyond md breakpoint
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
 
 </body>
 
