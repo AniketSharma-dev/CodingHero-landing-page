@@ -26,7 +26,7 @@
 4. Start the development server:
 
     ```bash
-    npm run dev
+    npm run start
     ```
 
 5. Open your browser and go to `http://localhost:3000` to see the landing page.
