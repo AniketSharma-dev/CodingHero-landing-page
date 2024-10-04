@@ -2,25 +2,31 @@
 
 
 
-# Installation
-Clone the repository:
 
-bash
-Copy code
-git clone https://github.com/AniketSharma-dev/CodingHero-landing-page.git
-Navigate to the project directory:
+### Installation
 
-bash
-Copy code
-cd CodingHero-landing-page
-Install dependencies:
+1. Clone the repository:
 
-bash
-Copy code
-npm install
-Start the development server:
+    ```bash
+    git clone https://github.com/AniketSharma-dev/CodingHero-landing-page.git
+    ```
 
-bash
-Copy code
-npm run dev
-Open your browser and go to http://localhost:3000 to see the landing page.
+2. Navigate to the project directory:
+
+    ```bash
+    cd CodingHero-landing-page
+    ```
+
+3. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+4. Start the development server:
+
+    ```bash
+    npm run dev
+    ```
+
+5. Open your browser and go to `http://localhost:3000` to see the landing page.
