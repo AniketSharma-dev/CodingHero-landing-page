@@ -31,6 +31,7 @@
 
 5. Open your browser and go to `http://localhost:YourPort` to see the landing page.
 
+
 6. For Building Tailwind CSS:
 
     ```bash
